@@ -5,7 +5,10 @@ Build ros from source without using a PPA (or even the debian ros packages):
     git clone git@github.com:lucasw/ros_from_src.git
     mkdir build
     cd build
-    ROSCONSOLE=https://github.com/ros/rosconsole ../ros_from_src/git_clone.sh
+    # if Ubuntu 20.04
+    # ROSCONSOLE=https://github.com/ros/rosconsole ../ros_from_src/git_clone.sh
+    # if Ubuntu 22.04 or later
+    ../ros_from_src/git_clone.sh
     # (take look at this script before running as sudo)
     sudo ../ros_from_src/dependencies.sh
     ../ros_from_src/build.sh
