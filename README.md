@@ -1,6 +1,8 @@
 # ros_from_src
 
-Build ros from source without using a PPA (or even the debian ros packages):
+Following these instructions is recommended for Ubuntu 22.04: [ubuntu_2204/README.md](ubuntu_2204/README.md)
+
+Otherwise to build ros entirely from source without using a PPA (or even the debian ros packages):
 
     git clone git@github.com:lucasw/ros_from_src.git
     mkdir build
