@@ -52,7 +52,7 @@ catkin_tools is needed to catkin build (but if catkin_make is preferred then thi
 ```
 cd ~/other/src
 # git clone git@github.com:lucasw/catkin_tools --branch sanitize_cmake_prefix_path
-git clone https:github.com/lucasw/catkin_tools --branch sanitize_cmake_prefix_path
+git clone https://github.com/lucasw/catkin_tools --branch sanitize_cmake_prefix_path
 cd catkin_tools
 python3 setup.py install --prefix=$DEST --record install_manifest.txt --single-version-externally-managed
 ```
