@@ -40,3 +40,8 @@ apt-get install -y python3-gnupg
 
 # TODO(lucasw) get this from source later
 apt-get install -y python3-rosunit
+
+# Added by Lindsay
+apt-get install -y libboost-python-dev
+apt-get install -y libyaml-cpp-dev
+apt-get install -y libbondcpp-dev

@@ -33,6 +33,25 @@ git clone https://github.com/ros/message_runtime
 git clone https://github.com/ros-o/pluginlib
 git clone https://github.com/ros/ros
 
+# Added by Lindsay
+git clone https://github.com/ros-perception/image_common --branch noetic-devel
+git clone https://github.com/ros/common_msgs
+git clone https://github.com/ros/nodelet_core
+git clone https://github.com/ros/bond_core --branch noetic-devel
+git clone https://github.com/ros/dynamic_reconfigure
+git clone https://github.com/ros-perception/perception_pcl --branch melodic-devel
+sed -i 's/CMAKE_CXX_STANDARD 14/CMAKE_CXX_STANDARD 17/' perception_pcl/pcl_ros/CMakeLists.txt
+git clone https://github.com/ros-perception/pcl_msgs --branch noetic-devel
+git clone https://github.com/ros/geometry
+touch geometry/kdl_conversions/CATKIN_IGNORE
+touch geometry/tf_conversions/CATKIN_IGNORE
+git clone https://github.com/ros/angles --branch noetic-devel
+git clone https://github.com/ros/geometry2 --branch noetic-devel
+touch geometry2/tf2_bullet/CATKIN_IGNORE
+touch geometry2/tf2_geometry_msgs/CATKIN_IGNORE
+touch geometry2/test_tf2/CATKIN_IGNORE
+git clone https://github.com/ros/actionlib
+
 ROSCONSOLE1=${ROSCONSOLE:-https://github.com/ros-o/rosconsole}
 git clone $ROSCONSOLE1
 
