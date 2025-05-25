@@ -34,3 +34,18 @@ To build with docker and another ubuntu version:
 Build with default Ubuntu 22.04 version:
 
     docker build . -t ros2204
+
+
+If you have problems compiling packages that use pcl: build processes complaining they depend on `usb-1.0` but can't find it, apply this patch to one of pcl's included cmake files:
+
+```
+--- old/Findlibusb.cmake        2025-05-25 14:55:58.089547900 +0300
++++ /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/Findlibusb.cmake        2025-05-25 14:50:09.888244937 +0300
+@@ -69,5 +69,5 @@
+ if(libusb_FOUND)
+   add_library(libusb::libusb UNKNOWN IMPORTED)
+   set_target_properties(libusb::libusb PROPERTIES INTERFACE_INCLUDE_DIRECTORIES "${libusb_INCLUDE_DIR}")
+-  set_target_properties(libusb::libusb PROPERTIES IMPORTED_LOCATION "${libusb_LIBRARIES}")
++  set_target_properties(libusb::libusb PROPERTIES IMPORTED_LOCATION "${PC_libusb_LINK_LIBRARIES}")
+ endif()
+```
