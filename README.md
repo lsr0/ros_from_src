@@ -13,10 +13,12 @@ Otherwise to build ros entirely from source without using a PPA (or even the deb
     ../ros_from_src/git_clone.sh
     # (take look at this script before running as sudo)
     sudo ../ros_from_src/dependencies.sh
-    ../ros_from_src/build.sh
 
-    # to install to /opt/ros/noetic (requires permissions, or chown /opt/ros/noetic)
-    ../ros_from_src/install.sh
+    # The build.sh file will also install to /opt/ros/noetic
+    sudo mkdir /opt/ros/noetic
+    sudo chown <youruser> /opt/ros/noetic
+    ../ros_from_src/build.sh
+    sudo chown root /opt/ros/noetic
 
 The above should be similar to what is in the github action: .github/workflows/ubuntu_20_04.yaml
 

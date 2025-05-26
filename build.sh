@@ -144,7 +144,7 @@ rosdep update
 cd $WS/..
 catkin init
 source $DEST/setup.bash
-catkin config --install-space /opt/ros/noetic
+catkin config --install-space /opt/ros/noetic --merge-install --install --merge-devel
 rospack list
 
 # rosdep install --from-paths src --ignore-src -r -s  # do a dry-run first
