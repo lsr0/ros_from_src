@@ -45,3 +45,4 @@ apt-get install -y python3-rosunit
 apt-get install -y libboost-python-dev
 apt-get install -y libyaml-cpp-dev
 apt-get install -y libbondcpp-dev
+apt-get install -y libcgal-dev
