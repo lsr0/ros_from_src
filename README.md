@@ -1,23 +1,20 @@
 # ros_from_src
 
-Following these instructions is recommended for Ubuntu 22.04: [ubuntu_2204/README.md](ubuntu_2204/README.md)
+To build ros entirely from source without using a PPA (or even the debian ros packages):
 
-Otherwise to build ros entirely from source without using a PPA (or even the debian ros packages):
-
-    git clone git@github.com:lucasw/ros_from_src.git
+    git clone https://github.com/lsr0/ros_from_src
+    cd ros_from_src
     mkdir build
     cd build
-    # if Ubuntu 20.04
-    # ROSCONSOLE=https://github.com/ros/rosconsole ../ros_from_src/git_clone.sh
     # if Ubuntu 22.04 or later
-    ../ros_from_src/git_clone.sh
+    ../git_clone.sh
     # (take look at this script before running as sudo)
-    sudo ../ros_from_src/dependencies.sh
+    sudo ../dependencies.sh
 
     # The build.sh file will also install to /opt/ros/noetic
     sudo mkdir /opt/ros/noetic
     sudo chown <youruser> /opt/ros/noetic
-    ../ros_from_src/build.sh
+    ../build.sh
     sudo chown root /opt/ros/noetic
 
 The above should be similar to what is in the github action: .github/workflows/ubuntu_20_04.yaml
